@@ -23,9 +23,9 @@ didInsertElement() {
   Webcam.set('constraints', {
     audio: false, 
     video: {
-      facingMode: {exact: 'user'}
+      facingMode: {exact: 'environment'}
     }
-  }
+  });
   Webcam.set('enable_flash', _enableFlashFallback);
   Webcam.set('swfURL', this.get('swfLocation'));
 
