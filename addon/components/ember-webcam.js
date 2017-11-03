@@ -20,6 +20,12 @@ swfLocation: `/${_flashFallbackDir}/webcam.swf`,
 },
 didInsertElement() {
   this._super(...arguments);
+  Webcam.set('constraints', {
+    audio: false, 
+    video: {
+      facingMode: {exact: 'user'}
+    }
+  }
   Webcam.set('enable_flash', _enableFlashFallback);
   Webcam.set('swfURL', this.get('swfLocation'));
 
